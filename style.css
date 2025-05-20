@@ -1,0 +1,244 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+
+}
+body {
+  background-color: aliceblue;
+}
+header h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d7511;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
+.horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  width: 100%; /* Ensure a defined width */
+  white-space: nowrap; /* Prevent wrapping of child elements */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: black transparent; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-gutter: stable; /* For Chrome */
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+}
+
+.horizontal a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  white-space: nowrap;
+  margin: 0.5rem;
+}
+.horizontal a:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  border-radius: 5px;
+  color: white;
+  transition: all 0.5s ease;
+}
+.horizontal a.active {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  border-radius: 5px;
+  color: white;
+}
+.background {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("backgroundImage.jpg");
+  height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+.background h1 {
+  font-size: 1.7rem;
+  margin: 0.5rem 0;
+  font-family: "Poppins", sans-serif;
+}
+.background p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  font-family: cursive;
+  font-style: normal;
+}
+.language {
+  position: fixed;
+  top: 61.5px;
+  right: 0;
+  z-index: 3;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  backdrop-filter: blur(5px);
+}
+.language details {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.language details[open] {
+  height: 270px;
+}
+details[open] ul {
+  display: block;
+}
+.language-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+#language {
+  width: 30px;
+  height: auto;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+  align-self: center;
+}
+.language-menu a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1.5px solid white;
+}
+
+.language-menu a:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0.8rem;
+}
+.cups{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  
+
+}
+.title {
+  font-size: 2rem;
+  color: #008905;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  text-shadow: 2px 2px 3px black;
+  margin-top: 1rem;
+  width: 60%;
+  border-bottom: 4px solid #008905;
+  letter-spacing: 4px;
+
+}
+.content {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px 0.5px black;
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 1rem;
+}
+.desc {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.desc h2 {
+  font-size: 1.5rem;
+  color: black;
+}
+.desc #price {
+  font-size: 1.2rem;
+  color: #008905;
+  font-weight: 600;
+}
+.item {
+  width: 100%;
+  height: 300px;
+  object-position: center;
+  object-fit: contain;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 5px black;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+}
+.sphagetties{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+}
+.sphagetties > .title{
+  font-size: 2rem;
+  color: #008905;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  text-shadow: 2px 2px 3px black;
+  margin-top: 1rem;
+  width: 100%;
+  border-bottom: 4px solid #008905;
+  letter-spacing: 4px;
+}
